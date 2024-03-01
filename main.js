@@ -71,22 +71,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Datos de ejemplo: lista de animales en el refugio
-const animales = [
-    { nombre: 'Luna', especie: 'Perro' },
-    { nombre: 'Simba', especie: 'Gato' },
-    { nombre: 'Max', especie: 'Perro' },
-    // Agregar más animales si es necesario
-];
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('formulario-ingreso');
+    const mensaje = document.getElementById('mensaje');
 
-// Obtener la lista de animales del refugio
-const listaAnimales = document.getElementById('lista-animales');
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
 
-// Iterar sobre la lista de animales y mostrarlos en la página
-animales.forEach(animal => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${animal.nombre} - ${animal.especie}`;
-    listaAnimales.appendChild(listItem);
+        const nombreAnimal = document.getElementById('nombre').value;
+        const especieAnimal = document.getElementById('especie').value;
+
+        // Mostrar el mensaje de ingreso con éxito
+        mensaje.textContent = `¡${nombreAnimal} el ${especieAnimal} ha sido ingresado al refugio con éxito!`;
+        mensaje.style.display = 'block'; // Mostrar el mensaje
+    });
 });
+
+
+
+
+
+
 
 
