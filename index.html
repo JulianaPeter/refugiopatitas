@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web de Patitas al Rescate: ¡Adopta, no compres! Cambia la vida de un animal y enriquece la tuya. Adopta y sé parte de esta hermosa historia de amor.">
+    <link rel="icon" type="image/png" href="./img/logo.png"/>
+    <title>Patitas al Rescate</title>
+    <link rel="stylesheet" href="./css/partials/estilos.css">
+    <meta property="og:title" content="Patitas al Rescate">
+    <meta property="og:description" content="Sitio web de Patitas al Rescate: ¡Adopta, no compres! Cambia la vida de un animal y enriquece la tuya. Adopta y sé parte de esta hermosa historia de amor.">
+    <meta property="og:image" content="./img/logo.png">
+    <meta http-equiv="Content-Language" content="es">
+    <meta name="keywords" content="adopción, animales, rescate, mascotas, amor">
+    <meta property="og:url" content="https://github.com/beftar/refugiopatitas/index.html">
+    <link rel="canonical" href="https://beftar.github.io/refugiopatitas/index.html">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo de Patitas">
+            <h2>PATITAS AL RESCATE</h2>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">INICIO</a></li>
+                <li><a href="./pags/contacto.html" class="nav-link">CONTACTO</a></li>
+                <li><a href="./pags/ubicacion.html" class="nav-link">UBICACION</a></li>
+                <li><a href="./pags/adopcion.html" class="nav-link">ADOPCIÓN</a></li>
+                <li><a href="./pags/donaciones.html" class="nav-link">DONACIONES</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="banner">
+        <div class="capa"></div>
+        <div class="informacion">
+            <h1>¡Adopta, no compres!</h1>
+            <p>Adoptar no solo cambia la vida de un animal, sino que también enriquece la tuya. Considera darle a un compañero peludo la oportunidad de ser amado y cuidado en un hogar lleno de cariño. ¡Adopta y sé parte de esta hermosa historia de amor! 🐾❤️</p>
+            <a href="./pags/leermas.html">Leer Más</a>
+        </div>
+    </div>
+
+    <section class="galeria">
+        <div class="dog-card">
+            <img src="./img/8888.jpg" alt="Perro en adopción - Odin">
+            <h3>ODIN</h3>
+            <a href="./pags/adopcion.html"><button>Adoptar</button></a>
+        </div>
+        <div class="dog-card">
+            <img src="./img/33.jpg" alt="Perro en adopción - Pulga">
+            <h3>PULGA</h3>
+            <a href="./pags/adopcion.html"><button>Adoptar</button></a>
+        </div>
+        <div class="dog-card">
+            <img src="./img/444.jpg" alt="Perro en adopción - Fito">
+            <h3>FITO</h3>
+            <a href="./pags/adopcion.html"><button>Adoptar</button></a>
+        </div>
+        <div class="dog-card">
+            <img src="./img/000.jpg" alt="Perro en adopción - Benjamin">
+            <h3>BENJAMIN</h3>
+            <a href="./pags/adopcion.html"><button>Adoptar</button></a>
+        </div>
+        </section>
+        
+        <div class="containerelegir">
+            <h1>¿Qué mascota es ideal para ti?</h1>
+            <form id="mascota-form">
+                <label for="tipo-mascota">¿Prefieres perros o gatos?</label>
+                <select id="tipo-mascota">
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                </select>
+                <button type="submit">¡Descúbrelo!</button>
+            </form>
+            <div id="resultado"></div>
+        </div>
+        <div class="formulario-container">
+            <h2>INGRESAR ANIMAL AL REFUGIO</h2>
+            <form id="formulario-ingreso">
+                <label for="nombre">Nombre del Animal:</label>
+                <input type="text" id="nombre" required>
+                <label for="especie">Especie:</label>
+                <select id="especie" required>
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <button type="submit">Ingresar Animal</button>
+            </form>
+            <div id="mensaje" style="display: none;"></div>
+        </div>
+        <div class="container">
+            <h2>TEST DE TU ANIMAL IDEAL</h2>
+            <form id="formulario-seleccion">
+                <label for="tamaño">Tamaño:</label>
+                <select id="tamaño">
+                    <option value="pequeño">Pequeño</option>
+                    <option value="grande">Grande</option>
+                </select>
+                <label for="comportamiento">Comportamiento:</label>
+                <select id="comportamiento">
+                    <option value="amigable">Amigable</option>
+                    <option value="tranquilo">Tranquilo</option>
+                    <option value="activo">Activo</option>
+                </select>
+                <label for="color">Color:</label>
+                <select id="color">
+                    <option value="blanco">Blanco</option>
+                    <option value="negro">Negro</option>
+                    <option value="marrón">Marrón</option>
+                    <option value="naranja">Naranja</option>
+                    <option value="verde">Verde</option>
+                    <option value="gris">Gris</option>
+                </select>
+                <button type="button" onclick="encontrarAnimal()">Buscar Animal</button>
+            </form>
+            <div class="resultado-container" id="contenedor-resultado">
+                <div id="resultado-animal"></div>
+            </div>
+        </div>
+        
+    <script src="script.js"></script>
+    <footer class="footer">
+        <p>&copy; <span id="currentYear"></span> PATITAS AL RESCATE | TODOS LOS DERECHOS RESERVADOS</p>
+    
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+  
+</body>
+</html>
